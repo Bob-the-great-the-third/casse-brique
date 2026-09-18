@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dsny6r1cs31im" path="res://raquette/skin_raquette_a.tres" id="1_w6mu3"]
 [ext_resource type="Script" uid="uid://b7iv2gfc78l0o" path="res://raquette/control_joueur.gd" id="2_8wwvb"]
+[ext_resource type="Shape2D" uid="uid://dj850lr1x2adk" path="res://raquette/raquette.tres" id="3_rdu13"]
 
 [node name="Raquette" type="CharacterBody2D" unique_id=8428115]
 
@@ -11,3 +12,7 @@ texture = ExtResource("1_w6mu3")
 
 [node name="ControlJoueur" type="Node" parent="." unique_id=950084838]
 script = ExtResource("2_8wwvb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97500859]
+position = Vector2(587, 581)
+shape = ExtResource("3_rdu13")

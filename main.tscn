@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://d3b7jtim3a8rc"]
 
+[ext_resource type="PackedScene" uid="uid://dii28iifb3b6w" path="res://raquette/raquette.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cvg0qcecynpjf" path="res://balle/balle.tscn" id="2_0xm2m"]
+
 [node name="Node2D" type="Node2D" unique_id=1596008472]
 
-[node name="hello" type="Label" parent="." unique_id=50001157]
-offset_left = 270.0
-offset_top = 129.0
-offset_right = 310.0
-offset_bottom = 152.0
-text = "Hello"
+[node name="Raquette" parent="." unique_id=8428115 instance=ExtResource("1_ig7tw")]
+
+[node name="balle" parent="." unique_id=1963650125 instance=ExtResource("2_0xm2m")]
+position = Vector2(587, 561)

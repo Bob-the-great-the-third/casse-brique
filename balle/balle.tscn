@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cvg0qcecynpjf"]
+
+[ext_resource type="Texture2D" uid="uid://2thwofxduu8" path="res://breakout_pieces.png" id="1_50dfo"]
+[ext_resource type="Script" uid="uid://dilmextbldk84" path="res://balle/balle.gd" id="2_jdfn4"]
+[ext_resource type="Shape2D" uid="uid://fjdihw2xp2k7" path="res://balle/balle.tres" id="3_jdfn4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8p52"]
+atlas = ExtResource("1_50dfo")
+region = Rect2(75.17316, 135.9901, 8.138832, 8.390549)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1963650125]
+position = Vector2(593, 604)
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2091713681]
+texture = SubResource("AtlasTexture_x8p52")
+
+[node name="Node" type="Node" parent="." unique_id=1806399779]
+script = ExtResource("2_jdfn4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1811110359]
+shape = ExtResource("3_jdfn4")
