@@ -1,12 +1,33 @@
 [gd_scene format=3 uid="uid://dp1yqb0k7uo6p"]
 
 [ext_resource type="Texture2D" uid="uid://2thwofxduu8" path="res://breakout_pieces.png" id="1_1bmya"]
+[ext_resource type="Script" uid="uid://bcdjlro3dryqm" path="res://brick/brick.gd" id="1_84gwy"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_84gwy"]
+friction = 0.0
+bounce = 1.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x8p52"]
 atlas = ExtResource("1_1bmya")
 region = Rect2(116, 112, 64, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8p52"]
+size = Vector2(64, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pnbb7"]
+size = Vector2(64, 16)
+
 [node name="brick" type="StaticBody2D" unique_id=2045129821]
+physics_material_override = SubResource("PhysicsMaterial_84gwy")
+script = ExtResource("1_84gwy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1412354582]
 texture = SubResource("AtlasTexture_x8p52")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1152832096]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=737001557]
+shape = SubResource("RectangleShape2D_x8p52")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1138482431]
+shape = SubResource("RectangleShape2D_pnbb7")

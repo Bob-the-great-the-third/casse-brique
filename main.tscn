@@ -4,14 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://cvg0qcecynpjf" path="res://balle/balle.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cwot1rhp0g035" path="res://murs/murs.tscn" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://c8v84hobhwde8" path="res://fosse.gd" id="4_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://2thwofxduu8" path="res://breakout_pieces.png" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://c3jsynupa26gt" path="res://bricks.gd" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://dp1yqb0k7uo6p" path="res://brick/brick.tscn" id="5_lquwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8p52"]
 size = Vector2(480, 20)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x8p52"]
-atlas = ExtResource("5_lquwl")
-region = Rect2(116, 112, 64, 16)
 
 [node name="Node2D" type="Node2D" unique_id=1596008472]
 
@@ -20,6 +17,7 @@ position = Vector2(240, 610)
 
 [node name="balle" parent="." unique_id=1963650125 instance=ExtResource("2_0xm2m")]
 position = Vector2(240, 600)
+linear_damp_mode = 1
 
 [node name="murs" parent="." unique_id=1351542463 instance=ExtResource("3_h2yge")]
 
@@ -30,7 +28,128 @@ script = ExtResource("4_1bvp3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fosse" unique_id=590399355]
 shape = SubResource("RectangleShape2D_x8p52")
 
-[node name="brick" type="StaticBody2D" parent="." unique_id=948338691]
+[node name="bricks" type="Node2D" parent="." unique_id=1028019599]
+script = ExtResource("5_7mycd")
 
-[node name="Sprite2D" type="Sprite2D" parent="brick" unique_id=1105752985]
-texture = SubResource("AtlasTexture_x8p52")
+[node name="brick" parent="bricks" unique_id=2045129821 instance=ExtResource("5_lquwl")]
+position = Vector2(50, 40)
+
+[node name="brick2" parent="bricks" unique_id=1433526184 instance=ExtResource("5_lquwl")]
+position = Vector2(125, 40)
+
+[node name="brick3" parent="bricks" unique_id=149114810 instance=ExtResource("5_lquwl")]
+position = Vector2(198, 40)
+
+[node name="brick4" parent="bricks" unique_id=1974124159 instance=ExtResource("5_lquwl")]
+position = Vector2(274, 40)
+
+[node name="brick5" parent="bricks" unique_id=1622378686 instance=ExtResource("5_lquwl")]
+position = Vector2(350, 40)
+
+[node name="brick6" parent="bricks" unique_id=1774839914 instance=ExtResource("5_lquwl")]
+position = Vector2(428, 40)
+
+[node name="brick8" parent="bricks" unique_id=1544200421 instance=ExtResource("5_lquwl")]
+position = Vector2(50, 73)
+
+[node name="brick9" parent="bricks" unique_id=1348334370 instance=ExtResource("5_lquwl")]
+position = Vector2(50, 73)
+
+[node name="brick10" parent="bricks" unique_id=2105824214 instance=ExtResource("5_lquwl")]
+position = Vector2(125, 73)
+
+[node name="brick11" parent="bricks" unique_id=1472499166 instance=ExtResource("5_lquwl")]
+position = Vector2(198, 73)
+
+[node name="brick12" parent="bricks" unique_id=337834343 instance=ExtResource("5_lquwl")]
+position = Vector2(274, 73)
+
+[node name="brick13" parent="bricks" unique_id=1155043702 instance=ExtResource("5_lquwl")]
+position = Vector2(350, 73)
+
+[node name="brick14" parent="bricks" unique_id=1009099488 instance=ExtResource("5_lquwl")]
+position = Vector2(428, 73)
+
+[node name="brick15" parent="bricks" unique_id=1308296393 instance=ExtResource("5_lquwl")]
+position = Vector2(52, 108)
+
+[node name="brick16" parent="bricks" unique_id=1441786372 instance=ExtResource("5_lquwl")]
+position = Vector2(52, 108)
+
+[node name="brick17" parent="bricks" unique_id=1792018991 instance=ExtResource("5_lquwl")]
+position = Vector2(127, 108)
+
+[node name="brick18" parent="bricks" unique_id=482823415 instance=ExtResource("5_lquwl")]
+position = Vector2(200, 108)
+
+[node name="brick19" parent="bricks" unique_id=2022339349 instance=ExtResource("5_lquwl")]
+position = Vector2(276, 108)
+
+[node name="brick20" parent="bricks" unique_id=1638802328 instance=ExtResource("5_lquwl")]
+position = Vector2(352, 108)
+
+[node name="brick21" parent="bricks" unique_id=783563452 instance=ExtResource("5_lquwl")]
+position = Vector2(430, 108)
+
+[node name="brick22" parent="bricks" unique_id=959000883 instance=ExtResource("5_lquwl")]
+position = Vector2(50, 142)
+
+[node name="brick23" parent="bricks" unique_id=1548086141 instance=ExtResource("5_lquwl")]
+position = Vector2(50, 142)
+
+[node name="brick24" parent="bricks" unique_id=511838162 instance=ExtResource("5_lquwl")]
+position = Vector2(125, 142)
+
+[node name="brick25" parent="bricks" unique_id=999373298 instance=ExtResource("5_lquwl")]
+position = Vector2(198, 142)
+
+[node name="brick26" parent="bricks" unique_id=2085443157 instance=ExtResource("5_lquwl")]
+position = Vector2(274, 142)
+
+[node name="brick27" parent="bricks" unique_id=279148065 instance=ExtResource("5_lquwl")]
+position = Vector2(350, 142)
+
+[node name="brick28" parent="bricks" unique_id=960879928 instance=ExtResource("5_lquwl")]
+position = Vector2(428, 142)
+
+[node name="brick29" parent="bricks" unique_id=1383020111 instance=ExtResource("5_lquwl")]
+position = Vector2(50, 175)
+
+[node name="brick30" parent="bricks" unique_id=1008112066 instance=ExtResource("5_lquwl")]
+position = Vector2(50, 175)
+
+[node name="brick31" parent="bricks" unique_id=709072485 instance=ExtResource("5_lquwl")]
+position = Vector2(125, 175)
+
+[node name="brick32" parent="bricks" unique_id=785109152 instance=ExtResource("5_lquwl")]
+position = Vector2(198, 175)
+
+[node name="brick33" parent="bricks" unique_id=1335055785 instance=ExtResource("5_lquwl")]
+position = Vector2(274, 175)
+
+[node name="brick34" parent="bricks" unique_id=261541628 instance=ExtResource("5_lquwl")]
+position = Vector2(350, 175)
+
+[node name="brick35" parent="bricks" unique_id=721269866 instance=ExtResource("5_lquwl")]
+position = Vector2(428, 175)
+
+[node name="brick36" parent="bricks" unique_id=1953782994 instance=ExtResource("5_lquwl")]
+position = Vector2(52, 210)
+
+[node name="brick37" parent="bricks" unique_id=420555629 instance=ExtResource("5_lquwl")]
+position = Vector2(52, 210)
+
+[node name="brick38" parent="bricks" unique_id=1382804020 instance=ExtResource("5_lquwl")]
+position = Vector2(127, 210)
+
+[node name="brick39" parent="bricks" unique_id=106801841 instance=ExtResource("5_lquwl")]
+position = Vector2(200, 210)
+
+[node name="brick40" parent="bricks" unique_id=1363381736 instance=ExtResource("5_lquwl")]
+position = Vector2(276, 210)
+
+[node name="brick41" parent="bricks" unique_id=1598992330 instance=ExtResource("5_lquwl")]
+position = Vector2(352, 210)
+
+[node name="brick42" parent="bricks" unique_id=956994813 instance=ExtResource("5_lquwl")]
+position = Vector2(430, 210)
