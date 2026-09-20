@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://trhr1xrje0s0"]
+
+[ext_resource type="Script" uid="uid://cksjhi0l3qua" path="res://button.gd" id="1_y1wl7"]
+
+[node name="Perdu" type="Node2D" unique_id=442312454]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=403384091]
+offset_top = -2.0
+offset_right = 480.0
+offset_bottom = 638.0
+color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1056022588]
+
+[node name="perdu" type="Label" parent="Node2D" unique_id=869006820]
+offset_right = 480.0
+offset_bottom = 640.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+text = "Vous avez
+perdu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Node2D" unique_id=2122263795]
+offset_left = 200.0
+offset_top = 380.0
+offset_right = 280.0
+offset_bottom = 410.0
+text = "Rejouer"
+script = ExtResource("1_y1wl7")

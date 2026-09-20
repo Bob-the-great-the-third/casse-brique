@@ -2,10 +2,35 @@
 
 [ext_resource type="PackedScene" uid="uid://dii28iifb3b6w" path="res://raquette/raquette.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cvg0qcecynpjf" path="res://balle/balle.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cwot1rhp0g035" path="res://murs/murs.tscn" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://c8v84hobhwde8" path="res://fosse.gd" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://2thwofxduu8" path="res://breakout_pieces.png" id="5_lquwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8p52"]
+size = Vector2(480, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8p52"]
+atlas = ExtResource("5_lquwl")
+region = Rect2(116, 112, 64, 16)
 
 [node name="Node2D" type="Node2D" unique_id=1596008472]
 
-[node name="Raquette" parent="." unique_id=8428115 instance=ExtResource("1_ig7tw")]
+[node name="raquette" parent="." unique_id=8428115 instance=ExtResource("1_ig7tw")]
+position = Vector2(240, 610)
 
 [node name="balle" parent="." unique_id=1963650125 instance=ExtResource("2_0xm2m")]
-position = Vector2(587, 561)
+position = Vector2(240, 600)
+
+[node name="murs" parent="." unique_id=1351542463 instance=ExtResource("3_h2yge")]
+
+[node name="fosse" type="Area2D" parent="." unique_id=1076644281]
+position = Vector2(240, 650)
+script = ExtResource("4_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fosse" unique_id=590399355]
+shape = SubResource("RectangleShape2D_x8p52")
+
+[node name="brick" type="StaticBody2D" parent="." unique_id=948338691]
+
+[node name="Sprite2D" type="Sprite2D" parent="brick" unique_id=1105752985]
+texture = SubResource("AtlasTexture_x8p52")

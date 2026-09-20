@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dp1yqb0k7uo6p"]
+
+[ext_resource type="Texture2D" uid="uid://2thwofxduu8" path="res://breakout_pieces.png" id="1_1bmya"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8p52"]
+atlas = ExtResource("1_1bmya")
+region = Rect2(116, 112, 64, 16)
+
+[node name="brick" type="StaticBody2D" unique_id=2045129821]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1412354582]
+texture = SubResource("AtlasTexture_x8p52")
